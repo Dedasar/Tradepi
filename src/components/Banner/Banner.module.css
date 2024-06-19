@@ -1,0 +1,10 @@
+.banner {
+width: 100%; /* Tam.img = 1920x347px */
+height: 390px;
+/*background-image: url('/public/images/bannermk.jpeg') ;*/
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+
+}

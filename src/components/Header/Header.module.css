@@ -1,0 +1,34 @@
+
+.header {
+    background-color: black;
+    border-bottom:2px solid greenyellow;
+    border-top:2px solid greenyellow;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    height: 68px;
+    display: flex;   
+    align-items: center;
+    justify-content:space-between
+}
+
+.header logo {    
+    display: flex;
+    align-items: center; 
+     
+
+}
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 3;   
+    margin: 60px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #0000ee;
+    padding-inline: 18px;
+    font-size: 18px;
+    font-weight: 400;
+}
