@@ -1,4 +1,4 @@
-import {BrouwerRouter, Routes, Route} from "react-router-deom";
+import {BrouwerRouter, Routes, Route} from "react-router-dom";
 
 
 export default function AppRoutes() {

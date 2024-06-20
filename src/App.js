@@ -1,20 +1,10 @@
-import Banner from "./components/Banner";
-import Container from "./components/Container";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Home from './pages/Home'
 
 function App() {
+
   return (
-    <>   
-    <Header/>   
-    <Banner imagem="mk"/>
-    <Container>
-    <h2>Jogos em alta</h2>
-    </Container>
-    
-    <Footer/>
-    </>
-  );
+    <Home />
+    );
 }
 
 export default App;
