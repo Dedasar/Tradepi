@@ -10,8 +10,7 @@ function Home() {
     <Banner imagem="mk"/>
     <Container>
     <h2>Jogos em alta</h2>
-    </Container>
-    
+    </Container>    
     <Footer/>
     </>
   );
