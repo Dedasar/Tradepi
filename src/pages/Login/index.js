@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
 import Banner from '../../components/Banner';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -42,6 +43,10 @@ const Login = () => {
                             />
                         </div>
                         <button type="submit">Login</button>
+                        <button type="submit">Cancela</button>
+                        <div className={styles.forgotPassword}>
+                            <Link to="/">Esqueci a Senha</Link>
+                        </div>
                     </form>
                 </div>
             </Container>
