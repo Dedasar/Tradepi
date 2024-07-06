@@ -25,10 +25,11 @@
     margin: 60px;
 }
 
-.header a {
+.link {
     text-decoration: none;
     color: #0000ee;
     padding-inline: 18px;
     font-size: 18px;
     font-weight: 400;
+    margin-top: 110px;
 }
