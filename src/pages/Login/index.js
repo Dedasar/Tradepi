@@ -14,18 +14,18 @@ const Login = () => {
         event.preventDefault();
         console.log('Email:', email);
         console.log('Password:', password);
-    };
+};
 
-    return (
+return (
         <>
             <Header />
-            <Container>
-            <Banner imagem="mk"/>
+            <Banner imagem="mk" />
+            <Container>                
                 <div>
                     <h2>Insira seus dados para o Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className={styles.inputGroup}>
-                            <label>Email:</label>
+                            <label>Email </label>
                             <input
                                 type="email"
                                 value={email}
@@ -34,7 +34,7 @@ const Login = () => {
                             />
                         </div>
                         <div>
-                            <label>Password:</label>
+                            <label>Senha </label>
                             <input
                                 type="password"
                                 value={password}
@@ -44,7 +44,7 @@ const Login = () => {
                         </div>
                         <button type="submit">Login</button>
                         <button type="submit">Cancela</button>
-                        <div className={styles.forgotPassword}>
+                        <div>
                             <Link to="/">Esqueci a Senha</Link>
                         </div>
                     </form>
