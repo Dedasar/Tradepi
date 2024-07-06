@@ -21,7 +21,7 @@ const Login = () => {
             <Header />
             <Container>
             <Banner imagem="mk"/>
-                <div className={styles.loginForm}>
+                <div>
                     <h2>Insira seus dados para o Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className={styles.inputGroup}>
@@ -33,7 +33,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div className={styles.inputGroup}>
+                        <div>
                             <label>Password:</label>
                             <input
                                 type="password"
