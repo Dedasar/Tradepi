@@ -13,7 +13,7 @@ function Pesquisa() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        // Aqui você pode adicionar a lógica para lidar com a pesquisa
+        // IMPLEMENTAR A LÓGICA DA PESQUISA*********************************************
         console.log('Pesquisa submetida:', query);
     };
 
