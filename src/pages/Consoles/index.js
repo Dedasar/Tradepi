@@ -10,11 +10,13 @@ function Consoles() {
   const [marcasSelecionadas, setMarcasSelecionadas] = useState([]);
 
   const categorias = [
-    "Console Seminovos",
-    "Consoles",
     "NINTENDO",
     "PLAYSTATION",
+    "PLAYSTATION 3",
+    "PLAYSTATION 4",
     "RETRÔ",
+    "XBOX 360",
+    "XBOX ONE",
     "XBOX"
   ];
 
@@ -55,8 +57,7 @@ function Consoles() {
       <Banner imagem="mk" />
       <Container>
         <h2>CONSOLES</h2>
-        <div className={styles.categorias}>
-          <h3>CATEGORIAS</h3>
+        <div className={styles.categorias}>         
           {categorias.map((categoria, index) => (
             <label key={index}>
               <input

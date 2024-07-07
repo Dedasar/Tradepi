@@ -19,6 +19,13 @@
     display: flex;
     gap: 12px;
     padding: 0px;
-    margin-top: 22px;
-    margin-bottom: -18px; 
+    margin-top: 8px;
+    margin-bottom: -5px; 
+}
+.link{
+    color: greenyellow;
+}
+
+.link:hover {
+    color: #58c9e8;
 }

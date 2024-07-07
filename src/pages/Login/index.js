@@ -45,7 +45,7 @@ return (
                         <button type="submit">Login</button>
                         <button type="submit">Cancela</button>
                         <div>
-                            <Link to="/">Esqueci a Senha</Link>
+                            <Link to="/recuperaSenha">Esqueci a Senha</Link>
                         </div>
                     </form>
                 </div>
