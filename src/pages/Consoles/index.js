@@ -3,12 +3,12 @@ import Banner from "../../components/Banner";
 import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import styles from "./Console.module.css";
 
 function Consoles() {
   const [categoriasSelecionadas, setCategoriasSelecionadas] = useState([]);
   const [marcasSelecionadas, setMarcasSelecionadas] = useState([]);
 
-  //ESTA EM UM ARRAY SÓ PARA DEMONSTRAR, DEVE MIGRAR PARA O BANCO DE DADOS
   const categorias = [
     "Console Seminovos",
     "Consoles",
@@ -18,7 +18,6 @@ function Consoles() {
     "XBOX"
   ];
 
-  //ESTA EM UM ARRAY SÓ PARA DEMONSTRAR, DEVE MIGRAR PARA O BANCO DE DADOS
   const marcas = ["Nintendo", "Microsoft", "Sony"];
 
   const handleCategoriaChange = (categoria) => {
@@ -40,7 +39,7 @@ function Consoles() {
   };
 
   const handleFiltrar = () => {
-    // *************IMPLEMENTAR categoriasSelecionadas e marcasSelecionadas ****************************
+    // Implementar lógica para filtrar com categoriasSelecionadas e marcasSelecionadas
     console.log("Filtrar");
   };
 
@@ -56,7 +55,7 @@ function Consoles() {
       <Banner imagem="mk" />
       <Container>
         <h2>CONSOLES</h2>
-        <div>
+        <div className={styles.categorias}>
           <h3>CATEGORIAS</h3>
           {categorias.map((categoria, index) => (
             <label key={index}>
@@ -69,7 +68,7 @@ function Consoles() {
             </label>
           ))}
         </div>
-        <div>
+        <div className={styles.marcas}>
           <h3>MARCA</h3>
           {marcas.map((marca, index) => (
             <label key={index}>
@@ -82,8 +81,17 @@ function Consoles() {
             </label>
           ))}
         </div>
-        <button onClick={handleFiltrar}>Filtrar</button>
-        <button onClick={handleLimparFiltro}>Limpar Filtro</button>
+        <div className={styles.botoes}>
+          <button className={styles["botao-filtrar"]} onClick={handleFiltrar}>
+            Filtrar
+          </button>
+          <button
+            className={styles["botao-limpar"]}
+            onClick={handleLimparFiltro}
+          >
+            Limpar Filtro
+          </button>
+        </div>
       </Container>
       <Footer />
     </>

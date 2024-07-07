@@ -3,6 +3,8 @@ import Banner from "../../components/Banner";
 import Container from "../../components/Container"
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import styles from "./Cadastro.module.css";
+
 
 // EXEMPLO APENAS, DEVE SER MIGRADO PARA O BANCO DE DADOS******************************
 const estadosBrasileiros = [
@@ -71,8 +73,8 @@ function Cadastro() {
             <Banner imagem="mk" />
             <Container>
                 <h2>Cadastre-se preenchendo os dados abaixo</h2>
-                    <form onSubmit={handleSubmit}>
-                        <label>
+                    <form className={styles.Cadastro} onSubmit={handleSubmit}>
+                        <label className={styles.Cadastro}>
                             Nome:
                             <input
                                 type="text"
@@ -83,9 +85,9 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             Rua:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="text"
                                 name="rua"
                                 value={formData.rua}
@@ -94,9 +96,9 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             Número:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="text"
                                 name="numero"
                                 value={formData.numero}
@@ -105,9 +107,9 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             Bairro:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="text"
                                 name="bairro"
                                 value={formData.bairro}
@@ -116,9 +118,9 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             Cidade:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="text"
                                 name="cidade"
                                 value={formData.cidade}
@@ -127,24 +129,24 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}> 
                             Estado:
-                            <select
+                            <select className={styles.Cadastro}
                                 name="estado"
                                 value={formData.estado}
                                 onChange={handleChange}
                                 required
                             >
-                                <option value="">Selecione o Estado</option>
+                                <option className={styles.Cadastro} value="">Selecione o Estado</option>
                                 {estadosBrasileiros.map((estado, index) => (
                                     <option key={index} value={estado.sigla}>{estado.sigla}</option>
                                 ))}
                             </select>
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             CEP:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="text"
                                 name="cep"
                                 value={formData.cep}
@@ -153,9 +155,9 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             E-mail:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="email"
                                 name="email"
                                 value={formData.email}
@@ -164,9 +166,9 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className={styles.Cadastro}>
                             Senha:
-                            <input
+                            <input className={styles.Cadastro}
                                 type="password"
                                 name="senha"
                                 value={formData.senha}
@@ -175,8 +177,8 @@ function Cadastro() {
                             />
                         </label>
                         <br />
-                        <button type="submit">Salvar</button>
-                        <button type="button">Cancelar</button>
+                        <button className={styles.Cadastro} type="submit">Salvar</button>
+                        <button className={styles.Cadastro} type="button">Cancelar</button>
                     </form>
                 
             </Container>

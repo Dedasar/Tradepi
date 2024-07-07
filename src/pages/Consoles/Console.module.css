@@ -1,0 +1,39 @@
+/* Estilos para o componente Consoles */
+
+.container {
+    max-width: 800px; /* Define uma largura máxima para o container */
+    margin: 0 auto; /* Centraliza o container na página */
+  }
+  
+  .categorias,
+  .marcas {
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: greenyellow;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .botao-filtrar,
+  .botao-limpar {
+    padding: 8px 16px; /* Ajusta o tamanho dos botões */
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 120px; /* Define um tamanho fixo para os botões */
+  }
+  
+  .botao-filtrar:hover,
+  .botao-limpar:hover {
+    background-color: #58c9e8;
+  }
+  

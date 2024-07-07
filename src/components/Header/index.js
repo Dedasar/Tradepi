@@ -7,8 +7,8 @@ function Header() {
             <nav>
                 <Link className={styles.link} to="/jogos">Jogos</Link>
                 <Link className={styles.link} to="/consoles">Consoles</Link>
-                <Link to="/"><img src="/images/logo2.png"></img></Link>
                 <Link className={styles.link} to="/pesquisa">Pesquisar</Link>
+                <Link to="/"><img src="/images/logo2.png"></img></Link>
                 <Link className={styles.link} to="/cadastro">Cadastro</Link>
                 <Link className={styles.link} to="/login">Login</Link>
                 <Link className={styles.link} to="/sobre">Sobre</Link>
