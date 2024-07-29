@@ -21,7 +21,7 @@
   }
   
   input[type="checkbox"] {
-    margin-right: 8px;
+    margin-right: 3px;
     cursor: pointer;
   }
   
@@ -33,7 +33,7 @@
     border-radius: 4px;
     cursor: pointer;
     width: 120px;
-    margin-right: 10px; /* Espaço à direita do botão */
+    margin-right: 10px; 
 }
 
 .botao-limpar {
@@ -44,7 +44,7 @@
     border-radius: 4px;
     cursor: pointer;
     width: 120px; 
-    margin-left: 10px; /* Espaço à esquerda do botão */
+    margin-left: 10px; 
 }
   
   .botao-filtrar:hover,

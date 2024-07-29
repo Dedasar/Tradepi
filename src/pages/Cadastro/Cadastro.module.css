@@ -2,7 +2,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 16px;
+    gap: 15px;
     margin-top: 16px;
 }
 
@@ -14,16 +14,12 @@ label {
 
 input,
 select {
-    width: calc(50% - 8px); /* Calcula a largura para dois campos por linha */
+    width: 100%; 
     padding: 8px;
     border: 1px solid greenyellow;
     border-radius: 4px;
     color: greenyellow;
-    background-color: black;
-}
-
-select {
-    width: calc(50% - 8px);
+    background-color: black;     
 }
 
 button {
@@ -34,6 +30,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    
 }
 
 button:hover {
