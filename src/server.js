@@ -1,4 +1,5 @@
-import jogosController from "./src/app/controllers/jogosController";
+import jogosController from "./app/controllers/JogosController.js";
+import app from './App';
 
 const app = express()
 
