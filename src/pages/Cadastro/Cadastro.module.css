@@ -1,38 +1,208 @@
-form {
+/* Cadastro Form */
+.registrationForm {
+    border-radius: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 16px;
+    flex-direction: column;
+    font: 700 20px Roboto, sans-serif;
+    width: 100%;
+    max-width: 896px;
+    /* Define a largura máxima semelhante ao formulário de login */
+    margin: 0 auto;
+    /* Centraliza o formulário horizontalmente */
+    padding: 0 20px;
+    /* Adiciona padding interno */
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: greenyellow;
+/* Form Container */
+.formContainer {
+    border-radius: 5px;
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 53px 80px;
+    width: 100%;
+    max-width: 1000px;
+    /* Ajusta para um tamanho adequado */
+    margin: 0 auto;
+    /* Centraliza o container horizontalmente */
 }
 
-input,
-select {
-    width: 100%; 
-    padding: 8px;
-    border: 1px solid greenyellow;
-    border-radius: 4px;
-    color: greenyellow;
-    background-color: black;     
+/* Title */
+.formTitle {
+    color: #9acd32;
+    font-size: 36px;
+    /* Ajuste de tamanho para melhor adequação */
+    margin-bottom: 42px;
+    text-align: left;
+    /* Alinha o título à esquerda */
+    margin-right: 50%;
 }
 
-button {
-    margin-top: 16px;
-    padding: 8px 16px;
-    background-color: greenyellow;
-    color: black;
+/* Subtitle */
+.subtitle {
+    color: #d9d9d9;
+    font-weight: 400;
+    margin-top: 30px;
+    /* Ajusta o espaçamento superior */
+    font-size: 18px;
+    /* Ajuste de tamanho para melhor visualização */
+    text-align: center;
+    /* Centraliza o subtítulo */
+}
+
+@media (max-width: 991px) {
+    .formContainer {
+        padding: 40px 20px;
+        max-width: 100%;
+        /* Ajusta a largura máxima para telas menores */
+    }
+
+    .formTitle {
+        font-size: 32px;
+        /* Ajusta o tamanho da fonte do título em telas menores */
+        margin-bottom: 30px;
+    }
+
+    .subtitle {
+        margin-top: 20px;
+    }
+}
+
+/* Label */
+.label {
+    color: #9acd32;
+    margin-top: 20px;
+    /* Ajusta o espaço entre labels e inputs */
+    text-align: left;
+    /* Alinha labels à esquerda */
+    margin-left: -50%;
+}
+
+/* Input */
+.input {
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    align-self: stretch;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    padding: 12px 18px;
+    border: 1px solid #000;
+    width: 220%;
+    box-sizing: border-box;
+    margin-left: -50%;
+
+}
+
+@media (max-width: 991px) {
+    .input {
+        padding-right: 10px;
+    }
+}
+
+/* Forgot Password Link */
+.forgotPassword {
+    color: #d9d9d9;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+    /* Ajuste o espaçamento superior */
+}
+
+/* Button Wrapper */
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    /* Ajusta o espaçamento superior */
+    width: 100%;
+    padding: 0 20px;
+    /* Ajusta padding interno */
+}
+
+/* Submit Button */
+.submitButton {
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #fff;
+    white-space: nowrap;
+    padding: 12px 40px;
+    font-size: 18px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    
+    display: block;
+    width: 220%;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: -50%;
+
 }
 
-button:hover {
-    background-color: #58c9e8;
+/* Login Prompt */
+.loginPrompt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    /* Ajusta o espaçamento superior */
+}
+
+.loginPrompt p {
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte */
+    color: white;
+    /* Ajusta a cor do texto */
+    margin: 0;
+    /* Remove a margem padrão */
+
+}
+
+.loginPrompt a {
+    color: #61dafb;
+    /* Ajusta a cor do link */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+}
+
+.loginPrompt a:hover {
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+@media (max-width: 991px) {
+    .submitButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        max-width: 100%;
+    }
+}
+
+/* Footer Wrapper */
+.formFooter {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    /* Ajusta o espaçamento superior */
+    gap: 10px;
+    /* Ajusta o espaçamento entre itens */
+    justify-content: center;
+    /* Alinha o conteúdo ao centro */
+}
+
+/* Footer Text */
+.loginPrompt {
+    color: #fff;
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte */
+}
+
+.loginLink {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte */
 }
