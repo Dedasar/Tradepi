@@ -14,41 +14,57 @@ const Login = () => {
         event.preventDefault();
         console.log('Email:', email);
         console.log('Password:', password);
-};
+    };
 
-return (
+    return (
         <>
             <Header />
             <Banner imagem="mk" />
-            <Container>                
-                <div>
-                    <h2>Insira seus dados para o Login</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className={styles.inputGroup}>
-                            <label>Email </label>
+            <Container>
+                <main className={styles.loginForm}>
+                    <div className={styles.container}>
+                        <form className={styles.formWrapper} onSubmit={handleSubmit}>
+                            <h1 className={styles.title}>Login</h1>
+                            <p className={styles.subtitle}>Digite seus dados de acesso abaixo</p>
+
+                            <label htmlFor="email" className={styles.label}>E-mail</label>
                             <input
                                 type="email"
+                                id="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                className={styles.input}
+                                placeholder="Digite seu e-mail"
+                                aria-label="Digite seu e-mail"
                                 required
                             />
-                        </div>
-                        <div>
-                            <label>Senha </label>
+
+                            <label htmlFor="password" className={styles.label}>Senha</label>
                             <input
                                 type="password"
+                                id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                className={styles.input}
+                                placeholder="Digite sua senha"
+                                aria-label="Digite sua senha"
                                 required
                             />
-                        </div>
-                        <button type="submit">Login</button>
-                        <button type="submit">Cancela</button>
-                        <div>
-                            <Link to="/recuperaSenha">Esqueci a Senha</Link>
-                        </div>
-                    </form>
-                </div>
+
+                            <Link to="/recuperaSenha" className={styles.forgotPassword}>Esqueci minha senha</Link>
+
+                            <div className={styles.buttonWrapper}>
+                                <button type="submit" className={styles.submitButton}>Acessar</button>
+
+                            </div>
+
+                            <div className={styles.signupWrapper}>
+                                <p className={styles.signupText}>Ainda não tem uma conta?</p>
+                                <Link to="/signup" className={styles.signupLink}>Cadastre-se</Link>
+                            </div>
+                        </form>
+                    </div>
+                </main>
             </Container>
             <Footer />
         </>

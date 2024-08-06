@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Banner from "../../components/Banner";
-import Container from "../../components/Container"
+import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import styles from "./Cadastro.module.css";
-
+import { Link } from 'react-router-dom';
 
 // EXEMPLO APENAS, DEVE SER MIGRADO PARA O BANCO DE DADOS******************************
 const estadosBrasileiros = [
@@ -38,7 +38,6 @@ const estadosBrasileiros = [
 ];
 
 function Cadastro() {
-
     const [formData, setFormData] = useState({
         nome: '',
         rua: '',
@@ -51,7 +50,6 @@ function Cadastro() {
         senha: ''
     });
 
-    // ALTERAÇÕES campos do formulário IMPLEMENTAR********************************
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -60,7 +58,6 @@ function Cadastro() {
         }));
     };
 
-    // Envio do formulário IMPLEMENTAR***********************
     const handleSubmit = (e) => {
         e.preventDefault();
         // Enviar para o backend IMPLEMENTAR*********************
@@ -72,115 +69,118 @@ function Cadastro() {
             <Header />
             <Banner imagem="mk" />
             <Container>
-                <h2>Cadastre-se preenchendo os dados abaixo</h2>
-                    <form className={styles.Cadastro} onSubmit={handleSubmit}>
-                        <label className={styles.Cadastro}>
-                            Nome:
+                <main className={styles.registrationForm}>
+                    <section className={styles.formContainer}>
+                        <h1 className={styles.formTitle}>Cadastrar</h1>
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="nome" className={styles.label}>Nome</label>
                             <input
                                 type="text"
+                                id="nome"
                                 name="nome"
+                                className={styles.input}
                                 value={formData.nome}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite seu nome"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            Rua:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="rua" className={styles.label}>Rua</label>
+                            <input
                                 type="text"
+                                id="rua"
                                 name="rua"
+                                className={styles.input}
                                 value={formData.rua}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite sua rua"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            Número:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="numero" className={styles.label}>Número</label>
+                            <input
                                 type="text"
+                                id="numero"
                                 name="numero"
+                                className={styles.input}
                                 value={formData.numero}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite o número"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            Bairro:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="bairro" className={styles.label}>Bairro</label>
+                            <input
                                 type="text"
+                                id="bairro"
                                 name="bairro"
+                                className={styles.input}
                                 value={formData.bairro}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite seu bairro"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            Cidade:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="cidade" className={styles.label}>Cidade</label>
+                            <input
                                 type="text"
+                                id="cidade"
                                 name="cidade"
+                                className={styles.input}
                                 value={formData.cidade}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite sua cidade"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}> 
-                            Estado:
-                            <select className={styles.Cadastro}
+
+                            <label htmlFor="estado" className={styles.label}>Estado</label>
+                            <select
+                                id="estado"
                                 name="estado"
+                                className={styles.input}
                                 value={formData.estado}
                                 onChange={handleChange}
-                                required
                             >
-                                <option className={styles.Cadastro} value="">Selecione o Estado</option>
-                                {estadosBrasileiros.map((estado, index) => (
-                                    <option key={index} value={estado.sigla}>{estado.sigla}</option>
+                                {estadosBrasileiros.map(estado => (
+                                    <option key={estado.sigla} value={estado.sigla}>{estado.nome}</option>
                                 ))}
                             </select>
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            CEP:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="cep" className={styles.label}>CEP</label>
+                            <input
                                 type="text"
+                                id="cep"
                                 name="cep"
+                                className={styles.input}
                                 value={formData.cep}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite seu CEP"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            E-mail:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="email" className={styles.label}>E-mail</label>
+                            <input
                                 type="email"
+                                id="email"
                                 name="email"
+                                className={styles.input}
                                 value={formData.email}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite seu e-mail"
                             />
-                        </label>
-                        <br />
-                        <label className={styles.Cadastro}>
-                            Senha:
-                            <input className={styles.Cadastro}
+
+                            <label htmlFor="senha" className={styles.label}>Senha</label>
+                            <input
                                 type="password"
+                                id="senha"
                                 name="senha"
+                                className={styles.input}
                                 value={formData.senha}
                                 onChange={handleChange}
-                                required
+                                placeholder="Digite sua senha"
                             />
-                        </label>
-                        <br />
-                        <button className={styles.Cadastro} type="submit">Salvar</button>
-                        <button className={styles.Cadastro} type="button">Cancelar</button>
-                    </form>
-                
+
+                            <button type="submit" className={styles.submitButton}>Cadastrar</button>
+                        </form>
+                        <div className={styles.loginPrompt}>
+                            <p>Já tem uma conta? <Link to="/login">Faça seu login</Link></p>
+                        </div>
+                    </section>
+                </main>
             </Container>
             <Footer />
         </>
