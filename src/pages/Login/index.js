@@ -60,7 +60,7 @@ const Login = () => {
 
                             <div className={styles.signupWrapper}>
                                 <p className={styles.signupText}>Ainda não tem uma conta?</p>
-                                <Link to="/signup" className={styles.signupLink}>Cadastre-se</Link>
+                                <Link to="/Cadastro" className={styles.signupLink}>Cadastre-se</Link>
                             </div>
                         </form>
                     </div>
