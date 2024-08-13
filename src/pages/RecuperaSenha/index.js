@@ -19,7 +19,7 @@ function RecuperaSenha() {
                     <button type="submit">Enviar</button>
                 </form>
                 <p>
-                    Lembrou a senha? <Link to="/login">Faça Login</Link>
+                    <Link to="/Login">Login</Link>
                 </p>
             </div>
             </Container >
