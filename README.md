@@ -28,6 +28,10 @@ Com seu foco exclusivo em mídia física, o aplicativo atende a um nicho especí
 ## Como Usar
 
 1. Clone o repositório.
-2. Instale as dependências usando `npm install`.
-3. Execute o projeto com `npm start`.
+2. Instale o VSCode 
+3. Instale as dependências usando `npm install`.
+4. Abra O Projeto
+5. Abra o Terminal.
+6. Execute o projeto com `npm start`.
+
 
