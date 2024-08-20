@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Login.module.css';
+import styles from './Login.module.css'; // Importar os estilos específicos
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
@@ -21,50 +21,41 @@ const Login = () => {
             <Header />
             <Banner imagem="mk" />
             <Container>
-                <main className={styles.loginForm}>
-                    <div className={styles.container}>
-                        <form className={styles.formWrapper} onSubmit={handleSubmit}>
-                            <h1 className={styles.title}>Login</h1>
-                            <p className={styles.subtitle}>Digite seus dados de acesso abaixo</p>
-
+                <div className={styles.loginContainer}>
+                    <h2 className={styles.loginTitle}>Login</h2>
+                    <p>Digite seus dados de acesso abaixo</p>
+                    <form onSubmit={handleSubmit}>
+                        <div className={styles.inputGroup}>
                             <label htmlFor="email" className={styles.label}>E-mail</label>
                             <input
                                 type="email"
                                 id="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
                                 className={styles.input}
                                 placeholder="Digite seu e-mail"
-                                aria-label="Digite seu e-mail"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
-
+                        </div>
+                        <div className={styles.inputGroup}>
                             <label htmlFor="password" className={styles.label}>Senha</label>
                             <input
                                 type="password"
                                 id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
                                 className={styles.input}
                                 placeholder="Digite sua senha"
-                                aria-label="Digite sua senha"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
-
+                        </div>
+                        <button type="submit" className={styles.button}>Acessar</button>
+                        <div className={styles.extraOptions}>
                             <Link to="/recuperaSenha" className={styles.forgotPassword}>Esqueci minha senha</Link>
-
-                            <div className={styles.buttonWrapper}>
-                                <button type="submit" className={styles.submitButton}>Acessar</button>
-
-                            </div>
-
-                            <div className={styles.signupWrapper}>
-                                <p className={styles.signupText}>Ainda não tem uma conta?</p>
-                                <Link to="/Cadastro" className={styles.signupLink}>Cadastre-se</Link>
-                            </div>
-                        </form>
-                    </div>
-                </main>
+                            <span className={styles.register}>Ainda não tem uma conta? <Link to="/cadastro" className={styles.registerLink}>Cadastre-se</Link></span>
+                        </div>
+                    </form>
+                </div>
             </Container>
             <Footer />
         </>
