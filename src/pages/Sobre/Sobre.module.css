@@ -1,4 +1,4 @@
-/* Estilos para a tela de início */
+/* src/pages/Sobre/Sobre.module.css */
 
 .intro {
     background-color: #1f1f1f; /* Preto claro */
@@ -34,6 +34,11 @@
     font-size: 18px; /* Fonte maior para parágrafos */
     color: #dcdcdc;
     line-height: 1.6; /* Melhorar a legibilidade */
+}
+
+.notice {
+    font-weight: bold;
+    color: #ff6f61; /* Destaque em tom de laranja avermelhado */
 }
 
 .commentForm {
